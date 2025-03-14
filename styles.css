@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #EAEDED;
+}
+
+header {
+    background-color: #131921;
+    color: white;
+    padding: 8px 0;
+    width: 100%;
+}
+
+.nav-belt {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    padding: 5px 10px;
+}
+
+.nav-logo img {
+    width: 100px;
+}
+
+.nav-fill {
+    flex-grow: 1;
+    padding: 0 15px;
+}
+
+.nav-search {
+    display: flex;
+    height: 40px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.nav-search-dropdown {
+    background-color: #f3f3f3;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    padding: 5px 8px;
+    width: 60px;
+    font-size: 13px;
+}
+
+.nav-search-input {
+    flex-grow: 1;
+    border: none;
+    padding: 0 10px;
+    font-size: 15px;
+}
+
+.nav-search-submit {
+    background-color: #febd69;
+    border: none;
+    width: 45px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-tools {
+    display: flex;
+    padding: 0 10px;
+    margin-left: 15px;
+}
+
+.nav-tools a {
+    color: white;
+    text-decoration: none;
+    padding: 0 12px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-line-2 {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav-main {
+    background-color: #232f3e;
+    color: white;
+    padding: 8px 0;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 15px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.nav-left a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.nav-left a:hover {
+    border: 1px solid white;
+    border-radius: 2px;
+    padding: 7px 11px;
+}
+
+.hero {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to bottom, rgba(234,237,237,0));
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+    font-size: 21px;
+    margin-bottom: 15px;
+    color: #0F1111;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.card-item {
+    text-align: center;
+}
+
+.card-item img {
+    width: 100%;
+    max-height: 120px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.card-item p {
+    font-size: 13px;
+    color: #0F1111;
+}
+
+.see-more {
+    color: #007185;
+    text-decoration: none;
+    font-size: 13px;
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.see-more:hover {
+    color: #C7511F;
+    text-decoration: underline;
+}
+
+.carousel {
+    margin: 25px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    max-width: 1500px;
+}
+
+.carousel h2 {
+    font-size: 21px;
+    margin-bottom: 15px;
+    color: #0F1111;
+}
+
+.carousel-items {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+}
+
+.carousel-items::-webkit-scrollbar {
+    height: 6px;
+}
+
+.carousel-items::-webkit-scrollbar-thumb {
+    background-color: #cdcdcd;
+    border-radius: 10px;
+}
+
+.carousel-item {
+    min-width: 150px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    transition: transform 0.2s;
+}
+
+.carousel-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.carousel-item p {
+    font-size: 14px;
+    color: #0F1111;
+    margin-bottom: 5px;
+}
+
+.price {
+    color: #B12704;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+.site-navigation {
+    background-color: #37475A;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.site-navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.site-navigation a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    background-color: #232F3E;
+    color: white;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-around;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer-column a {
+    display: block;
+    color: #DDD;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo {
+    background-color: #232F3E;
+    border-top: 1px solid #3a4553;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 100px;
+}
+
+.footer-bottom {
+    background-color: #131A22;
+    color: #DDD;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.footer-bottom p {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-links {
+        flex-wrap: wrap;
+        padding: 30px 20px;
+    }
+    
+    .footer-column {
+        flex-basis: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .content {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+    
+    .nav-tools a {
+        padding: 0 5px;
+    }
+    
+    .footer-column {
+        flex-basis: 100%;
+    }
+    
+    .hero {
+        height: 200px;
+    }
+}
